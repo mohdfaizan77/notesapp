@@ -2,13 +2,17 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import CategoryList from './pages/CategoryList.jsx';
 import TopicDetail from './pages/TopicDetail.jsx';
+import FocusTimer from './components/FocusTimer.jsx';
 
 export default function App() {
   return (
-    <Routes>
+    <>
+      <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/category/:categoryId" element={<CategoryList />} />
       <Route path="/topic/:topicId" element={<TopicDetail />} />
-    </Routes>
+      </Routes>
+      <FocusTimer />
+    </>
   );
 }
