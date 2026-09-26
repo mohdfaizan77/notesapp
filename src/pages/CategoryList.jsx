@@ -42,13 +42,16 @@ export default function CategoryList() {
       </header>
 
       <div className="search-wrap">
-        <input
+        <div className="search-shell">
+          <span className="search-icon" aria-hidden="true">⌕</span>
+          <input
           className="search-input"
           type="text"
           placeholder="Search notes..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-        />
+          />
+        </div>
       </div>
 
       <div className="filter-chip-row">
